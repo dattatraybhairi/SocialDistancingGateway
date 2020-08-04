@@ -1,0 +1,13 @@
+[Unit]
+Description=Timer Counter Service
+
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/Desktop/clock/updateTime.py
+
+# Increase the default a bit in order to allow many simultaneous
+# files to be monitored, we might need a lot of fds.
+
+[Install]
+WantedBy=multi-user.target

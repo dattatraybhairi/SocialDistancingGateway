@@ -1,0 +1,14 @@
+[Unit]
+Description=data post
+
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/Desktop/social.py
+
+# Increase the default a bit in order to allow many simultaneous
+# files to be monitored, we might need a lot of fds.
+
+[Install]
+WantedBy=multi-user.target
+
